@@ -6,6 +6,7 @@ import { HeaderComponent } from './header.component';
 import { CountryComponent } from './country/country.component';
 import { StationComponent } from './station/station.component';
 import { BusComponent } from './bus/bus.component';
+import {CountryService} from './country/country.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { BusComponent } from './bus/bus.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
