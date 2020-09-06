@@ -19,4 +19,9 @@ export class CountryService {
   ListCountries() {
     return this.cuntries;
   }
+
+  // tslint:disable-next-line:typedef
+  FindCountry(id: number) {
+    return this.cuntries[id];
+  }
 }

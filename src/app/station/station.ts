@@ -1,4 +1,4 @@
 export class Station {
-  constructor(private id: number, private idCountry: number, private name: string) {
+  constructor(public id: number, public idCountry: number, public name: string) {
   }
 }

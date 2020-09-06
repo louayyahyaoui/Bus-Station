@@ -1,1 +1,9 @@
-<p>station works!</p>
+<div class="row">
+
+  <div class="col-xs-12">
+
+    <ul class="list-group">
+      <bs-station-start *ngFor="let station of stationFound; let i = index" [station]="station" [stationId]="station.id"></bs-station-start>
+    </ul>
+  </div>
+</div>

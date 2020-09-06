@@ -7,12 +7,10 @@ import {CountryService} from './country.service';
   templateUrl: './country.component.html'
 })
 export class CountryComponent implements OnInit {
-  private countries: Country[];
 
   constructor(private sc: CountryService) { }
 
   ngOnInit(): void {
-    this.countries = this.sc.ListCountries();
   }
 
 }

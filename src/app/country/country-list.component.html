@@ -1,0 +1,13 @@
+<div class="row">
+
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="https://www.mobility.total/sites/g/files/wompnd1456/f/styles/media_cover_1314px/public/atoms/image/visuel129-geolocalisation-service-mobilite-professionnelle-refonte.jpg?itok=IIcnrjWH"  height="130" width="220" alt="" class="img-responsive">
+      </div>
+    </div>
+    <ul class="list-group">
+      <bs-country-start *ngFor="let country of countries; let i = index" [country]="country" [countryId]="i"></bs-country-start>
+    </ul>
+  </div>
+</div>

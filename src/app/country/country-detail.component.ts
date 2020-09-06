@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {Country} from '../country/country';
+import {Country} from './country';
 import {Subscription} from 'rxjs';
-import {Station} from './station';
-import {CountryService} from '../country/country.service';
+import {CountryService} from './country.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {StationService} from './station.service';
+import {StationService} from '../station/station.service';
 
 @Component({
-  selector: 'bs-station',
-  templateUrl: './station.component.html'
+  selector: 'bs-country-detail',
+  templateUrl: './country-detail.component.html',
+  styles: [
+  ]
 })
-export class StationComponent implements OnInit {
+export class CountryDetailComponent implements OnInit {
 
-  stationFound: Station [] ;
+  selectedCountry: Country;
   private countryIndex: number;
   private subscription: Subscription;
   constructor(
@@ -26,7 +27,7 @@ export class StationComponent implements OnInit {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.countryIndex = params['id'];
-        this.stationFound = this.stationService.FindStation(this.countryIndex);
+        this.selectedCountry = this.cs.FindCountry(this.countryIndex);
       }
     );
   }
