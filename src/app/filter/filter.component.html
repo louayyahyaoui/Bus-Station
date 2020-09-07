@@ -3,7 +3,7 @@
   <br/> </div>
 
 <div style="text-align: center">
-  <input class="form-control form-control-lg" type="text" placeholder="search here with country or station name" [(ngModel)]="saerchName">
+  <input class="form-control form-control-lg" type="text" placeholder="type here your country , station , time or ticket Price" [(ngModel)]="saerchName">
 </div>
 <br><br>
 <div class="container">
@@ -21,8 +21,8 @@
     <tr *ngFor="let b of listBus | filter:saerchName">
       <td>{{b.country}}</td>
       <td>{{b["station"]}}</td>
-      <td>{{b.time}}</td>
-      <td>{{b["ticketPrice"]}}</td>
+      <td><strong>{{b.time}}</strong> minutes remaining </td>
+      <td>cost <strong>{{b["ticketPrice"]}}</strong> dinars</td>
 
 
 

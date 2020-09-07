@@ -1,4 +1,4 @@
 export class BusStation {
-  constructor( private country: string,  private station: string, private time: number, private ticketPrice: number) {
+  constructor( public country: string,  public station: string, public time: number, public ticketPrice: number) {
   }
 }

@@ -15,7 +15,11 @@ export class FilterPipe implements PipeTransform {
       for (let i = 0; i < value.length; i++) {
         const country: string = value[i].country;
         const station: string = value[i].station;
-        if (country.toLowerCase().startsWith(sName.toLowerCase()) || station.toLowerCase().startsWith(sName.toLowerCase())) {
+        const time: number = value[i].time;
+        const ticketPrice: number = value[i].ticketPrice;
+
+        // tslint:disable-next-line:max-line-length
+        if (country.toLowerCase().includes(sName.toLowerCase()) || station.toLowerCase().includes(sName.toLowerCase()) || time.toString().includes(sName.toLowerCase()) || ticketPrice.toString().includes(sName.toLowerCase())){
           busArray.push(value[i]);
         }
       }
