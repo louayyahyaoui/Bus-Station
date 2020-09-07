@@ -15,6 +15,7 @@ export class BusComponent implements OnInit {
 
   busFound: Bus [] = [];
   private stationIndex: number;
+  private countryIndex: number;
   private subscription: Subscription;
   constructor(
     private cs: CountryService,
@@ -27,9 +28,10 @@ export class BusComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        this.stationIndex = params['id1'];
+        this.stationIndex = params["idstation"];
+        this.countryIndex = params["idcountry"];
         this.busFound = this.bs.FindBus(this.stationIndex);
-        console.log(this.stationIndex);
+        console.log(this.busFound);
       }
     );
   }

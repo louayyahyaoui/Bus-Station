@@ -19,6 +19,8 @@ import {FilterPipe} from './filter/filter.pipe';
 import {StationService} from './station/station.service';
 import {BusService} from './bus/bus.service';
 import {FormsModule} from '@angular/forms';
+import { StationDetailComponent } from './station/station-detail.component';
+import { StationListComponent } from './station/station-list.component';
 
 
 
@@ -36,6 +38,8 @@ import {FormsModule} from '@angular/forms';
     BusStartComponent,
     FilterComponent,
     FilterPipe,
+    StationDetailComponent,
+    StationListComponent,
 
   ],
   imports: [

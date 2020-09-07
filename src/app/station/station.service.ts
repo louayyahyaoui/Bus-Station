@@ -15,7 +15,7 @@ export class StationService {
     new Station(4, 4, 'Manzeh 2'),
     new Station(5, 0, 'Raoued'),
     new Station(6, 1, 'Cartage'),
-    new Station(7, 2, 'La GOulette'),
+    new Station(7, 2, 'La Goulette'),
     new Station(8, 3, 'Hammem Lif'),
     new Station(9, 4, 'Le Kram'),
     new Station(10, 0, 'Lac'),
@@ -34,19 +34,25 @@ export class StationService {
   constructor() { }
 
   // tslint:disable-next-line:typedef
-  getStation() {
+  getStations() {
     return this.stations;
   }
 
+  // tslint:disable-next-line:typedef
   FindStation(id: number) {
     this.stationFound.length = 0;
     // tslint:disable-next-line:prefer-for-of
     for ( let i = 0; i < this.stations.length; i++) {
-      if (this.stations[i].idCountry.toString() === id.toString()) {
+
+      if (this.stations[i].idCountry === id) {
         this.stationFound.push(this.stations[i]);
-        console.log(this.stationFound.length);
       }
     }
     return this.stationFound;
+  }
+
+  // tslint:disable-next-line:adjacent-overload-signatures typedef
+  getStation(id: number) {
+    return this.stations[id];
   }
 }

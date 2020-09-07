@@ -25,8 +25,9 @@ export class StationComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        this.countryIndex = params['id'];
+        this.countryIndex = +params["idcountry"];
         this.stationFound = this.stationService.FindStation(this.countryIndex);
+        console.log(this.stationFound);
       }
     );
   }

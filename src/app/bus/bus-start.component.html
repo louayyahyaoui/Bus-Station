@@ -1,11 +1,15 @@
-<a [routerLink]="[busId]" class="list-group-item clearfix" routerLinkActive="active">
-  <div class="pull-left">
-    <h4 class="list-group-item-heading">{{bus.time}}</h4>
-    <h4 class="list-group-item-heading">{{bus.ticketPrice}}</h4>
+
+
+<div class="row row-cols-1 row-cols-md-1"  >
+  <div class="col mb-4">
+    <div class="card">
+      <img src="{{bus.imagePath}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Price :</strong> it Cost {{bus.ticketPrice}} dinars</h5>
+        <p class="card-text"><strong>Time :</strong>  {{bus.time}} minutes remaining </p>
+      </div>
+    </div>
   </div>
-</a>
 
-
-<hr>
-
+</div>
 

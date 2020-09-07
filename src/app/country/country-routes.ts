@@ -8,6 +8,6 @@ import {CountryDetailComponent} from './country-detail.component';
 
 export const COUNTRY_ROUTES: Routes = [
 
-  {path: ':id', component: CountryDetailComponent, children: STATION_ROUTES},
+  {path: ':idcountry', component: CountryDetailComponent, children: STATION_ROUTES},
 ];
 
