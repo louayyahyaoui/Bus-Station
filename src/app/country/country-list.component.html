@@ -7,7 +7,7 @@
       </div>
     </div>
     <ul class="list-group">
-      <bs-country-start *ngFor="let country of countries; let i = index" [country]="country" [countryId]="i"></bs-country-start>
+      <bs-country-start *ngFor="let country of countries; let i = index" [country]="country" [countryId]="country.id"></bs-country-start>
     </ul>
   </div>
 </div>

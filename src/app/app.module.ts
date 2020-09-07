@@ -14,6 +14,13 @@ import { CountryStartComponent } from './country/country-start.component';
 import {routing} from './app-routing';
 import { StationStartComponent } from './station/station-start.component';
 import { BusStartComponent } from './bus/bus-start.component';
+import { FilterComponent } from './filter/filter.component';
+import {FilterPipe} from './filter/filter.pipe';
+import {StationService} from './station/station.service';
+import {BusService} from './bus/bus.service';
+import {FormsModule} from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -26,14 +33,18 @@ import { BusStartComponent } from './bus/bus-start.component';
     CountryDetailComponent,
     CountryStartComponent,
     StationStartComponent,
-    BusStartComponent
+    BusStartComponent,
+    FilterComponent,
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    routing
+    routing,
+    FormsModule
   ],
-  providers: [CountryService],
+  providers: [CountryService, StationService, BusService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

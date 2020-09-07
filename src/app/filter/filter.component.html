@@ -1,0 +1,32 @@
+<script src="bus-station.ts"></script>
+<div style="text-align: center">
+  <input type="text"  [(ngModel)]="saerchName"/>
+</div>
+<div style="text-align: center">
+  <h2 style="color: navy">Bus Station Filter</h2>
+  <br/> </div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Country</th>
+      <th>Station</th>
+      <th>Time</th>
+      <th>Ticket Price</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of listBus | filter:saerchName">
+      <td>{{b.country}}</td>
+      <td>{{b["station"]}}</td>
+      <td>{{b.time}}</td>
+      <td>{{b["ticketPrice"]}}</td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+

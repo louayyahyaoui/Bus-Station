@@ -12,7 +12,7 @@ import {StationService} from './station.service';
 })
 export class StationComponent implements OnInit {
 
-  stationFound: Station [] ;
+  public stationFound: Station [] ;
   private countryIndex: number;
   private subscription: Subscription;
   constructor(
@@ -30,5 +30,6 @@ export class StationComponent implements OnInit {
       }
     );
   }
+
 
 }

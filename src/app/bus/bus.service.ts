@@ -6,7 +6,7 @@ import {Bus} from './bus';
 })
 export class BusService {
 
-  busFound: Bus[] = [];
+  public busFound: Bus[] = [];
   private busList: Bus[] = [
     new Bus(0, 0, 3, 0.8),
     new Bus(1, 1, 2, 1.2),
@@ -45,11 +45,12 @@ export class BusService {
   // tslint:disable-next-line:typedef
   FindBus(id: number) {
     this.busFound.length = 0;
-    console.log(id);
+
+    // tslint:disable-next-line:prefer-for-of
     for ( let i = 0; i < this.busList.length; i++) {
       if (this.busList[i].idStation.toString() === id.toString()) {
-
         this.busFound.push(this.busList[i]);
+        console.log(this.busFound.length);
       }
     }
     return this.busFound;

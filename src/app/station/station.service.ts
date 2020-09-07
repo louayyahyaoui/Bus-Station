@@ -37,13 +37,14 @@ export class StationService {
   getStation() {
     return this.stations;
   }
-  // tslint:disable-next-line:typedef
+
   FindStation(id: number) {
     this.stationFound.length = 0;
+    // tslint:disable-next-line:prefer-for-of
     for ( let i = 0; i < this.stations.length; i++) {
       if (this.stations[i].idCountry.toString() === id.toString()) {
-        console.log(this.stations[i]);
         this.stationFound.push(this.stations[i]);
+        console.log(this.stationFound.length);
       }
     }
     return this.stationFound;
