@@ -18,10 +18,10 @@ import { FilterComponent } from './filter/filter.component';
 import {FilterPipe} from './filter/filter.pipe';
 import {StationService} from './station/station.service';
 import {BusService} from './bus/bus.service';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { StationDetailComponent } from './station/station-detail.component';
 import { StationListComponent } from './station/station-list.component';
-import {ChatModule} from './chat/chat.module';
+import {UserModule} from './FilterSearch/user/user.module';
 
 
 
@@ -48,7 +48,8 @@ import {ChatModule} from './chat/chat.module';
     RouterModule,
     routing,
     FormsModule,
-    ChatModule
+    UserModule,
+    ReactiveFormsModule
   ],
   providers: [CountryService, StationService, BusService],
   bootstrap: [AppComponent]

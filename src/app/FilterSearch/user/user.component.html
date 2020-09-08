@@ -1,0 +1,15 @@
+<div class="container">
+  <br/>
+  <h1>List of Users</h1>
+  <hr/>
+
+  <bs-search (groupFilters)="filters = $event"
+  ></bs-search>
+
+  <br/>
+
+  <bs-user-list [groupFilters]="filters"
+                 [searchByKeyword]="searchText"></bs-user-list>
+</div>
+
+

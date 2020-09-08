@@ -1,0 +1,16 @@
+<table class="table table-responsive">
+  <tr>
+    <th>Country Name</th>
+    <th>Station Name</th>
+    <th>Time</th>
+    <th>Ticket Price</th>
+  </tr>
+  <tbody>
+  <tr *ngFor="let Bus of filteredBus | filterPipe: searchByKeyword: 'name'">
+    <td>{{ Bus.country}}</td>
+    <td>{{ Bus.station}}</td>
+    <td>{{ Bus.time}}</td>
+    <td>{{ Bus.ticketPrice}}</td>
+  </tr>
+  </tbody>
+</table>
