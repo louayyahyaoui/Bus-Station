@@ -21,6 +21,7 @@ import {BusService} from './bus/bus.service';
 import {FormsModule} from '@angular/forms';
 import { StationDetailComponent } from './station/station-detail.component';
 import { StationListComponent } from './station/station-list.component';
+import {ChatModule} from './chat/chat.module';
 
 
 
@@ -46,7 +47,8 @@ import { StationListComponent } from './station/station-list.component';
     BrowserModule,
     RouterModule,
     routing,
-    FormsModule
+    FormsModule,
+    ChatModule
   ],
   providers: [CountryService, StationService, BusService],
   bootstrap: [AppComponent]
