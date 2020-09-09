@@ -21,7 +21,7 @@ export class UserListComponent implements OnChanges {
     if (this.groupFilters) this.filterUserList(this.groupFilters, this.buses);
   }
   filterUserList(filters: any, users: any): void {
-    this.filteredBus = this.buses; //Reset User List
+    this.filteredBus = this.buses; // Reset User List
     const keys = Object.keys(filters);
     const filterUser = user => {
       let result = keys.map(key => {
@@ -51,6 +51,7 @@ export class UserListComponent implements OnChanges {
     };
     this.filteredBus = this.buses.filter(filterUser);
   }
+
   loadUsers(): void {
     this.userService.fetchUsers()
       .subscribe(users => this.buses = users);

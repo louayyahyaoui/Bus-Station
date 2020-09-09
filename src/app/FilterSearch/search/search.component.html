@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-6">
       <input type="text"
-             formControlName="stationName"
+             formControlName="station"
              class="form-control"
              placeholder="Station Name"
       />
@@ -20,31 +20,17 @@
       <input type="text"
              formControlName="timefrom"
              class="form-control"
-             placeholder="time from"
+             placeholder="time from [Example : 6 minutes]"
       />
     </div>
     <div class="col-md-6">
       <input type="text"
              formControlName="timeto"
              class="form-control"
-             placeholder="time to"
+             placeholder="time to [Example : 15 minutes]"
       />
     </div>
 
-    <div class="col-md-6">
-      <input type="text"
-             formControlName="pricefrom"
-             class="form-control"
-             placeholder="price from"
-      />
-    </div>
-    <div class="col-md-6">
-      <input type="text"
-             formControlName="priceto"
-             class="form-control"
-             placeholder="price to"
-      />
-    </div>
     <div class="col-md-12 col-sm-12">
       <button class="btn btn-primary float-right"
               (click)="search(form.value)">Search</button>

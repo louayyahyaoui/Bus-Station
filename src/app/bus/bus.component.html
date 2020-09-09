@@ -1,3 +1,12 @@
 
-      <bs-bus-start *ngFor="let bus of busFound;" [bus]="bus" [busId]="bus.id"></bs-bus-start>
 
+
+      <div class="row">
+      <div class="col-xs-12">
+        <bs-bus-start *ngFor="let bus of busFound;" [bus]="bus" [busId]="bus.id"></bs-bus-start>
+
+
+        <router-outlet></router-outlet>
+
+      </div>
+      </div>

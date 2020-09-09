@@ -32,12 +32,11 @@ export class SearchComponent implements OnInit {
   }
   buildForm(): void {
     this.form = this.fb.group({
-      stationName: new FormControl(''),
+      station: new FormControl(''),
       country: new FormControl(''),
       timefrom: new FormControl(''),
       timeto: new FormControl(''),
-      pricefrom: new FormControl(''),
-      priceto: new FormControl(''),
+
     });
   }
 
